@@ -1,0 +1,22 @@
+likelihood:
+  loglike: import_module('galileon_ng12p5_csp_normHD').loglike_HD
+
+params:
+  A2:
+    prior:
+      min: 1e-31
+      max: 1e-29
+    ref:
+      min: 1e-30
+      max: 2e-30
+    proposal: 0.5e-30
+    latex: A^2
+
+sampler:
+  mcmc:
+    Rminus1_stop: 0.01
+    max_tries: 1000
+
+timing: True
+
+output: chains_csp_normHD/hd
